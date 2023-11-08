@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "logging": false,
+  "scripts": {
+    "start": "npm run create:db && npm run run:migrations && npm run start:app",
+    "start:app": "nodemon ./bin/www",
+    "create:db": "sequelize db:create",
+    "run:migrations": "sequelize db:migrate"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
